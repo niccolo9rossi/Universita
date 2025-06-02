@@ -1,0 +1,48 @@
+/* Punto 1: Stili base e centratura */
+body {
+    background: #fff;
+}
+/* Punto 1: Container centrato, min-width, margini */
+.container {
+    margin: 16px auto;
+    border: 1px solid #3b3b6d;
+    max-width: 900px;
+    min-width: 400px;
+    width: 80vw;
+    box-sizing: border-box;
+}
+/* Punto 1: Header e Footer con bordo e background */
+header {
+    background: #f1f1f1;
+    border-bottom: 2px solid #222;
+    padding: 0;
+}
+header h1 {
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 0 10px 0;
+}
+/* Punto 1: Main con altezza 80% viewport */
+main {
+    min-height: 60vh;
+    height: 400px;
+    position: relative;
+    background: #fff;
+}
+footer {
+    background: #f1f1f1;
+    border-top: 2px solid #222;
+    text-align: center;
+    padding: 6px 0 2px 0;
+    font-size: 1.1em;
+}
+/* Punto 5: Quadrati posizionati assolutamente */
+.square {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 70px;
+    height: 70px;
+    border-radius: 0;
+}

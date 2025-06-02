@@ -1,0 +1,8 @@
+name: crea-fetch
+version: 0.0.1
+schema: v1
+prompts:
+  - name: crea fetch
+    description: crea una funzione che esegue una fetch
+    prompt: |
+      Scrivi una funzione JavaScript che esegue una fetch per leggere i dati da un file .json locale (ad esempio "dati.json") e stampa il risultato in console.

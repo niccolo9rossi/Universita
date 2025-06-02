@@ -1,0 +1,51 @@
+/* 1. Container centrato, min-width, margini */
+.container {
+    min-width: 400px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Titolo centrato */
+h1,
+#overlay h2.centered-title {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+/* Main content */
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+    height: calc(80vh - 40px); /* Adjusted height to accommodate header and footer */
+}
+
+/* Header e footer con bordo */
+header,
+footer {
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+}
+
+/* 3. Mobile first: larghezze container */
+@media (min-width: 601px) {
+    .container {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1001px) {
+    .container {
+        width: 800px;
+    }
+}
+
+/* Quadrati nel main */
+.quadrato {
+    position: relative;
+    border: 1px solid black;
+}

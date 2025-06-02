@@ -1,0 +1,106 @@
+/* 1. Container centrato, min-width, margini */
+.container {
+  min-width: 400px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* 3. Desktop first: larghezze container */
+@media (min-width: 681px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (min-width: 1021px) {
+  .container {
+    width: 1000px;
+  }
+}
+/* Titolo centrato */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+/* Header e footer con bordo */
+header,
+footer {
+  border: 1px solid #a1a1a1;
+  padding: 10px;
+}
+/* 2. Section articoli */
+#contenitore-articoli {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#contenitore-articoli section {
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contenitore-articoli h3 {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+/* 4. Responsive: section per riga */
+@media (min-width: 681px) {
+  #contenitore-articoli {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #contenitore-articoli section {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+@media (min-width: 1021px) {
+  #contenitore-articoli section {
+    flex: 0 0 calc(33.333% - 10px);
+  }
+}
+/* 5. Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  opacity: 0.8;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#overlay-content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#overlay h2 {
+  color: blue;
+  font-size: 2em;
+  margin: 0;
+  z-index: 1001;
+}
+#close-overlay {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 8px 16px;
+  cursor: pointer;
+  z-index: 1002;
+}

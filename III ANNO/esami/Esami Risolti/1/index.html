@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example.com</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- HEADER solo con titolo -->
+    <header>
+        <h1>Example.com</h1>
+    </header>
+
+    <!-- TOGGLE MENU per mobile, fuori dall'header -->
+    <span id="menu-toggle">MENU</span>
+
+    <!-- MENU -->
+    <h3>Menu</h3>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Home Page</a></li>
+            <li><a href="#">Informazioni</a></li>
+            <li><a href="#">Prodotti</a></li>
+            <li><a href="#">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <h2 onclick="shuffleArticoli()">Articoli</h2>
+        <div id="contenitore-articoli"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><a href="#">Copyright – Example.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

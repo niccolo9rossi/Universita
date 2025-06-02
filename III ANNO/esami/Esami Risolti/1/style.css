@@ -1,0 +1,156 @@
+/*Qui troviamo i punti:
+(3) – Larghezze centrate responsive
+(4) – Menu orizzontale/verticale responsive
+(5) – Articoli a 33%/100% secondo viewport
+*/
+
+/* Base layout comune */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+main {
+  padding: 0px;
+  text-align: left;
+}
+h2 {
+  cursor: pointer;
+}
+
+/* HEADER con bordo */
+header {
+  padding: 0px;
+  border: 1px solid #000;
+  text-align: left;
+}
+#menu-toggle {
+  display: none; /* visibile solo su mobile */
+  cursor: pointer;
+  margin-top: 0;
+  font-weight: bold;
+  text-align: left;
+}
+h3 {
+  margin: 10;
+  padding: 0;
+  text-align: left;
+}
+
+/* MENU puntato con link */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: #000 1px solid;
+  text-align: left;
+  display: flex;         /* Allinea orizzontalmente */
+}
+
+nav li {
+  display: block;        /* Per flex, meglio block */
+  margin: 0;
+  padding: 0;        /* Solo padding verticale */
+  border: none;
+  flex: 1 1 auto;        /* Occupa lo spazio disponibile */
+  text-align: left;      /* Allinea testo a sinistra */
+}
+
+nav li + li {
+  border-left: 1px solid #000;
+}
+a:link {
+  text-decoration: none;
+  color: blue;
+  display: block;
+  padding: 2px 0;      /* Solo padding verticale, niente spazio a sinistra/destra */
+  text-align: left;
+}
+
+/* ARTICOLI contenitore e box */
+#contenitore-articoli {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left; /* Allinea a sinistra */
+}
+
+#contenitore-articoli section {
+  padding: 10px;
+  margin-bottom: 4px; /* Diminuisci la distanza tra gli articoli */
+  box-sizing: border-box;
+  text-align: left;   /* Allinea a sinistra */
+}
+/* FOOTER */
+footer {
+  border: 1px solid black;
+  margin-top: 0;
+  text-align: left;
+}
+
+/* 3) RESPONSIVE - MOBILE (<1000px): centrato 400px */
+@media (max-width: 999px) {
+  body {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  /* 4) Menu verticale */
+  #menu-toggle {
+    display: block;
+    margin: 10px auto;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 50vw; /* Larghezza del menu: 50% della viewport */
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav li {
+    display: block;
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    border-radius: 0;
+    width: 100%; /* Ogni voce occupa tutta la larghezza del menu */
+    box-sizing: border-box;
+  }
+  nav li:last-child {
+    border-bottom: 1px solid #000;
+  }
+  a:link, a:visited {
+    display: block;
+    padding: 0px 0px;
+    text-align: left;
+    text-decoration: underline;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* 5) Articoli in colonna */
+  #contenitore-articoli section {
+    width: 100%;
+  }
+  h3{
+    display: none;  /*nasconde la scritta menu su mobile*/
+  }
+}
+
+/* 3) RESPONSIVE - DESKTOP (≥1000px): centrato 900px */
+@media (min-width: 1000px) {
+  body {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  /* 5) Articoli affiancati 33% */
+  #contenitore-articoli section {
+    width: 32%;
+  }
+}
