@@ -1,0 +1,12 @@
+{
+    "nome": "Pierpaolo",
+    "cognome": "Rossi",
+    "eta": 30,
+    "corsi": ["PW", "PJDM", "SD"],
+    "media": 28.5,
+    "data":{
+        "dd": 22,
+        "mm": 5,
+        "aa": 2025
+    }
+}

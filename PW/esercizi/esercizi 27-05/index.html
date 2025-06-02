@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Post JSON</title>
+</head>
+<body>
+    <h1>Test Post JSON</h1>
+    <form id="myForm">
+        <label for="inpName">Nome:</label>
+        <input type="text" name="nome" id="inpName"><br>
+
+        <label for="inpCorso">Corso:</label>
+        <input type="text" name="corso" id="inpCorso"><br>
+
+        <input type="submit" value="Invia">
+    </form>
+    <div id="message"></div>
+</body>
+<script>
+    const myForm = document.querySelector('#myForm');
+    const inpName = document.querySelector('#inpName');
+    const inpCorso = document.querySelector('#inpCorso');
+    const message = document.querySelector('#message');
+
+    myForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Previene il comportamento predefinito del form
+
+        const data = {
+            nome: inpName.value,
+            corso: inpCorso.value
+        };
+
+        try{
+        const resp = await fetch("http://localhost:3000/data",{
+            method:"POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        // Controlla se la risposta è ok (status 200-299)
+        const respJson = await resp.json();
+        if(respJson.status == "Success"){
+            message.innerHTML = respJson.message;
+        }
+        else{
+            message.innerHTML = "Errore: " + respJson.message;
+        }
+        console.log('Risposta dal server:', respJson);
+    } catch (error) {
+            console.error('Errore durante la richiesta:', error);
+        }
+
+        /*// Resetta i campi del form
+        inpName.value = '';
+        inpCorso.value = '';
+        */
+    });
+
+</script>
+</html>

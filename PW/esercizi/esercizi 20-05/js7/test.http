@@ -1,0 +1,8 @@
+get http://localhost:9090/data
+
+###
+get http://localhost:9090/secure
+
+###
+get http://localhost:9090/secure
+Authorization: Bearer passwordsegreta

@@ -1,0 +1,22 @@
+[
+    {
+        "docente":"Loreti",
+        "corso":"pw",
+        "crediti": 6
+    },
+    {
+        "docente":"Basili",
+        "corso":"Ia",
+        "crediti": 9
+    },
+    {
+        "docente":"Bracciale",
+        "corso":"FINF",
+        "crediti": 9
+    },
+    {
+        "docente":"Croce",
+        "corso":"SO",
+        "crediti": 12
+    }
+]

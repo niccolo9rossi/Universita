@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form</title>
+</head>
+<body>
+    <h1>
+        Test Form
+    </h1>
+    <form action="/elabData" method="POST"> <!-- Il form invia i dati all'endpoint /elabData tramite metodo POST -->
+        <label for="inpName">Nome:</label> <!-- Etichetta per il campo nome -->
+        <input type="text" name="nome" id="inpName"><br> <!-- Campo di testo per inserire il nome, associato all'etichetta tramite id e name -->
+        <label for="inpCorso">Corso:</label> <!-- Etichetta per il campo corso -->
+        <input type="text" name="corso" id="inpCorso"><br> <!-- Campo di testo per inserire il corso, associato all'etichetta tramite id e name -->
+        <input type="submit" value="Invia"> <!-- Pulsante per inviare il form -->
+    </form>
+</body>
+</html>
