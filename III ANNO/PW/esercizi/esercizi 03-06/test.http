@@ -1,0 +1,21 @@
+GET http://localhost:3000/api/v1/products
+
+###
+GET http://localhost:3000/api/v1/products/1
+
+###
+GET http://localhost:3000/api/v1/products/18
+
+###
+POST http://localhost:3000/api/v1/products/
+Content-Type: application/json
+    
+    {
+        "nome": "VERMENTINO PLL",
+        "cantina": "Tor Vergata",
+        "luogo": "Roma",
+        "prezzo": 30.79,
+        "prezzoScontato": 19.09,
+        "voto": 4.7,
+        "review": 11
+    }
