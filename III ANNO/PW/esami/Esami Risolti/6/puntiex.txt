@@ -1,0 +1,4 @@
+Punto 1: dati e endpoint → dati.json e server.js
+Punto 2: layout, colori, sezioni → index.html e style.css
+Punto 3: responsive e hamburger → style.css
+Punto 4: fetch e visualizzazione lista → script.js

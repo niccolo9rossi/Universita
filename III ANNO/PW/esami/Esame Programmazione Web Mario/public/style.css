@@ -1,0 +1,58 @@
+body {
+
+}
+
+.container {
+
+}
+
+#header {
+
+}
+
+#footer {
+
+}
+
+#nav-menu ul {
+
+}
+
+#nav-menu li {
+
+}
+
+#nav-menu a {
+
+}
+
+.hamburger {
+
+}
+
+.hamburger div{
+
+}
+
+main {
+
+}
+
+@media (max-width: "INSERIRE IL MAX VIEWPORT") {
+    #nav-menu ul {
+        flex-direction: column; /* Cambia la direzione in colonna per schermi piccoli */
+        position: absolute; /* Posiziona il menu in modo assoluto */
+    }
+    
+    .hamburger {
+        display: block; /* Mostra l'icona hamburger su schermi piccoli */
+    }
+    
+    #nav-menu ul {
+        display: none; /* Nasconde il menu di navigazione su schermi piccoli */
+    }
+
+    #nav-menu.active ul {
+        display: flex; /* Mostra il menu di navigazione quando attivo */
+    }
+}

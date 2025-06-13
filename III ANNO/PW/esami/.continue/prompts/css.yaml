@@ -1,0 +1,21 @@
+name: css-strategy
+version: 0.0.1
+schema: v1
+prompts:
+  - name: CSS Desktop-first
+    description: Crea un file CSS seguendo la strategia desktop-first
+    prompt: |
+      Scrivi un file CSS che segua la strategia desktop-first:
+        - Imposta gli stili base per la visualizzazione su desktop.
+        - Utilizza media query per adattare il layout a schermi più piccoli (tablet e mobile).
+        - Assicurati che il layout sia leggibile e usabile su tutte le dimensioni di schermo.
+        - Includi almeno una regola per la tipografia, una per il layout e una per i colori.
+
+  - name: CSS Mobile-first
+    description: Crea un file CSS seguendo la strategia mobile-first
+    prompt: |
+      Scrivi un file CSS che segua la strategia mobile-first:
+        - Imposta gli stili base per la visualizzazione su dispositivi mobili.
+        - Utilizza media query per adattare il layout a schermi più grandi (tablet e desktop).
+        - Assicurati che il layout sia leggibile e usabile su tutte le dimensioni di schermo.
+        - Includi almeno una regola per la tipografia, una per il layout e una per i colori.

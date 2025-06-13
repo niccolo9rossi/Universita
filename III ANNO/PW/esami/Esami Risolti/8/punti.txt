@@ -1,0 +1,5 @@
+Punto 1: dati.json, server.js
+Punto 2: index.html, style.css
+Punto 3: style.css, script.js
+Punto 4: script.js
+Punto 5: index.html, style.css, script.js

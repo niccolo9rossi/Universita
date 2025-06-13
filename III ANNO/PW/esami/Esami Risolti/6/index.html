@@ -1,0 +1,44 @@
+<!--Punto 2 Pagina web con layout e colori richiesti-->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestione Persone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container"> <!-- Container centrato, max-width 960px -->
+    <header>
+      <div class="header-left">
+        <h1>Logo</h1> <!-- Titolo a sinistra -->
+      </div>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <ul id="lista-persone"></ul> <!-- Lista popolata da JS -->
+      </aside>
+      <section>
+        <h2>Dettagli</h2>
+        <p>Seleziona una persona dalla lista per vedere i dettagli.</p>
+        <button id="btn-colori">Aggiorna Colori</button>
+      </section>
+    </main>
+    <footer>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

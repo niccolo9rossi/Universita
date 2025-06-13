@@ -1,0 +1,58 @@
+name: server
+version: 0.0.1
+schema: v1
+prompts:
+  - name: Server Express generico
+    description: Crea un server Express con endpoint GET e POST generici
+    prompt: |
+      Ecco il codice richiesto:
+      ```javascript
+      const express = require('express');
+      const fs = require('fs');
+      const path = require('path');
+      const app = express();
+
+      const DATA_PATH = path.join('./dati.json');
+
+      app.use(express.static("./"));
+      app.use(express.json());
+
+      // GET /items - restituisce tutti gli items
+      app.get('/items', (req, res) => {
+        fs.readFile(DATA_PATH, 'utf8', (err, data) => {
+          if (err) return res.status(500).json({ error: 'Errore lettura dati' });
+          res.json(JSON.parse(data));
+        });
+      });
+
+      // GET /items/:id - restituisce un item per id
+      app.get('/items/:id', (req, res) => {
+        fs.readFile(DATA_PATH, 'utf8', (err, data) => {
+          if (err) return res.status(500).json({ error: 'Errore lettura dati' });
+          const items = JSON.parse(data);
+          const item = items.find(i => i.id === parseInt(req.params.id));
+          if (!item) return res.status(404).json({ error: 'Item non trovato' });
+          res.json(item);
+        });
+      });
+
+      // POST /items - aggiunge un nuovo item
+      app.post('/items', (req, res) => {
+        fs.readFile(DATA_PATH, 'utf8', (err, data) => {
+          if (err) return res.status(500).json({ error: 'Errore lettura dati' });
+          let items = JSON.parse(data);
+          const nuovoItem = req.body;
+          nuovoItem.id = items.length > 0 ? items[items.length - 1].id + 1 : 1;
+          items.push(nuovoItem);
+          fs.writeFile(DATA_PATH, JSON.stringify(items, null, 2), err => {
+            if (err) return res.status(500).json({ error: 'Errore scrittura dati' });
+            res.status(201).json(nuovoItem);
+          });
+        });
+      });
+
+      const PORT = 3000;
+      app.listen(PORT, () => {
+        console.log(`Server avviato su http://localhost:${PORT}`);
+      });
+      ```
