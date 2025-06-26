@@ -1,0 +1,14 @@
+body{
+    border: 1px solid blue;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+ul{
+    display: none;
+}
+@media(min-width: 800px){
+    body{
+        width: 700px;
+    }
+}

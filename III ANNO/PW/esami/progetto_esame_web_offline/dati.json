@@ -1,5 +1,0 @@
-[
-  { "id": 1, "titolo": "Introduzione a JavaScript", "autore": "Mario Rossi", "contenuto": "Lorem ipsum..." },
-  { "id": 2, "titolo": "CSS per principianti", "autore": "Luigi Verdi", "contenuto": "Lorem ipsum..." },
-  { "id": 3, "titolo": "HTML5: le novità", "autore": "Elena Bianchi", "contenuto": "Lorem ipsum..." }
-]

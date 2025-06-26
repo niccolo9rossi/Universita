@@ -1,0 +1,46 @@
+#container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+header,footer{
+    border: 4px solid darkcyan;
+    margin: 20px 0px;
+    padding: 30px;
+}
+
+main {
+    border: 4px solid salmon;
+}
+
+.box{
+
+    width: 300px;
+    border: 2px solid grey;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+#contenitore-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em; /* Spazio tra le box */
+    padding: 20px;
+}
+
+@media (max-width: 1240px) {
+    
+    #container{
+        width: 800px;
+    }
+}
+
+@media (max-width: 819px) {
+
+    #container{
+        width: 400px;
+    }
+    
+}
